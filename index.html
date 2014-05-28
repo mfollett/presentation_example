@@ -1,0 +1,21 @@
+<html ng-app="demo">
+  <head>
+  </head>
+  <body>
+    <textarea ng-model="data"></textarea>
+    <article>
+      <bomf-table-of-contents></bomf-table-of-contents>
+      <div btf-markdown="data"></div>
+    </article>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-sanitize.js"></script>
+    <script src="showdown/src/showdown.js"></script>
+    <script src="markdown.js"></script>
+    <script src="toc.js"></script>
+    <script>
+      (function() {
+        angular.module('demo', ['bomf.table-of-contents', 'btford.markdown']);
+      })();
+    </script>
+  </body>
+</html>
